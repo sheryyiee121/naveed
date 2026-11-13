@@ -39,21 +39,41 @@
     window.addEventListener('resize', function () { if (window.innerWidth > 900) close(); });
   })();
 
-  /* Movie carousels — duplicate the row so CSS can loop forever */
-  document.querySelectorAll('.movie-track').forEach(function (track) {
-    if (track.dataset.looped) return;
-    track.dataset.looped = '1';
-    track.innerHTML += track.innerHTML;
+  /* Movie carousels — keep moving even while the cursor sits on a card */
+  var movieRails = [];
+  document.querySelectorAll('.movie-rail').forEach(function (rail, index) {
+    var track = rail.querySelector('.movie-track');
+    if (!track) return;
+    if (!track.dataset.looped) {
+      track.dataset.looped = '1';
+      track.innerHTML += track.innerHTML;
+    }
+    movieRails.push({
+      track: track,
+      x: 0,
+      dir: index % 2 === 0 ? 1 : -1
+    });
   });
   document.querySelectorAll('.rail-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var rail = document.getElementById('rail-' + btn.getAttribute('data-rail'));
       if (!rail) return;
-      var track = rail.querySelector('.movie-track');
-      if (!track) return;
-      track.classList.toggle('is-reverse', btn.getAttribute('data-dir') === '-1');
+      movieRails.forEach(function (item) {
+        if (item.track.parentElement === rail) item.dir = Number(btn.getAttribute('data-dir')) || 1;
+      });
     });
   });
+  (function tick() {
+    movieRails.forEach(function (item) {
+      var w = item.track.scrollWidth / 2;
+      if (w < 8) return;
+      item.x += 0.75 * item.dir;
+      if (item.x >= w) item.x -= w;
+      if (item.x < 0) item.x += w;
+      item.track.style.transform = 'translate3d(' + (-item.x) + 'px,0,0)';
+    });
+    requestAnimationFrame(tick);
+  })();
 
   /* FAQ accordion */
   function bindFaq() {

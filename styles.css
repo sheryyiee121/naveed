@@ -167,16 +167,11 @@ body.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-4
 .rail-nav{display:flex;gap:8px;flex:none}
 .rail-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:24px;line-height:1;cursor:pointer}
 .rail-btn:hover{border-color:var(--amber);background:rgba(236,72,153,.12)}
-.movie-rail{overflow:hidden;padding:8px 20px 22px}
-.movie-track{display:flex;gap:14px;width:max-content;animation:movie-marquee 48s linear infinite;will-change:transform}
-#rail-more .movie-track{animation-duration:56s;animation-direction:reverse}
-.movie-track.is-reverse{animation-direction:reverse}
-@keyframes movie-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion: reduce){.movie-track{animation:none}}
-.movie-card{position:relative;width:190px;flex:none;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card2);transition:transform .2s,box-shadow .2s}
-.movie-card img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;display:block}
+.movie-rail{overflow:hidden;padding:8px 20px 22px;pointer-events:none}
+.movie-track{display:flex;gap:14px;width:max-content;will-change:transform}
+.movie-card{position:relative;width:190px;flex:none;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card2)}
+.movie-card img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;display:block;pointer-events:none}
 .movie-card span{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-weight:800;font-size:14px}
-.movie-card:hover{transform:translateY(-6px) scale(1.04);box-shadow:0 18px 40px rgba(180,20,90,.35);z-index:2}
 @media(max-width:680px){
   .movies-head{flex-direction:column;align-items:flex-start}
   .movie-card{width:132px}
