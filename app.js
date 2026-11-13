@@ -39,15 +39,19 @@
     window.addEventListener('resize', function () { if (window.innerWidth > 900) close(); });
   })();
 
-  /* Movie carousels */
+  /* Movie carousels — duplicate the row so CSS can loop forever */
   document.querySelectorAll('.movie-track').forEach(function (track) {
+    if (track.dataset.looped) return;
+    track.dataset.looped = '1';
     track.innerHTML += track.innerHTML;
   });
   document.querySelectorAll('.rail-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var rail = document.getElementById('rail-' + btn.getAttribute('data-rail'));
       if (!rail) return;
-      rail.scrollBy({ left: Number(btn.getAttribute('data-dir')) * Math.max(280, rail.clientWidth * 0.72), behavior: 'smooth' });
+      var track = rail.querySelector('.movie-track');
+      if (!track) return;
+      track.classList.toggle('is-reverse', btn.getAttribute('data-dir') === '-1');
     });
   });
 
