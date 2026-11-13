@@ -14,7 +14,8 @@ header.site{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);backgrou
 .btn-primary:hover{transform:translateY(-1px)}
 .btn-ghost{border-color:var(--line);color:var(--text);background:rgba(236,72,153,.03)}
 .btn-sm{padding:10px 18px;font-size:14px}
-.hero{position:relative;padding:96px 0 88px;overflow:hidden;background-color:#000;background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.55) 55%,rgba(0,0,0,.85)),url('hero-living-room.webp') center/cover no-repeat}
+.hero{position:relative;padding:96px 0 28px;overflow:hidden;background-color:#000;background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.55) 55%,rgba(0,0,0,.88)),url('hero-living-room.webp') center/cover no-repeat}
+.hero-movies{position:relative;z-index:2;margin-top:36px;padding-bottom:10px}
 #bg3d{position:absolute;inset:0;width:100%;height:100%;opacity:.9;background:radial-gradient(600px 300px at 20% 20%,rgba(236,72,153,.12),transparent 60%),radial-gradient(500px 280px at 80% 70%,rgba(244,114,182,.10),transparent 60%)}
 .hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,660px);gap:44px;align-items:center}
 .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(244,114,182,.08);color:var(--cyan);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:700}
@@ -155,6 +156,28 @@ body.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-4
 .tv-stand{position:absolute;width:46%;height:38px;background:#1C1218;border:1px solid var(--line);bottom:31px;border-radius:50% 50% 12px 12px;z-index:-1}
 .speech{position:absolute;right:-16px;bottom:68px;max-width:190px;padding:14px 16px;border-radius:18px 18px 4px 18px;background:var(--card);border:1px solid var(--line);box-shadow:0 18px 50px rgba(180,20,90,.4);font-weight:800;color:var(--text);transform:rotate(-3deg)}
 /* trust strip */
+.movies-section{position:relative;padding-top:64px;padding-bottom:40px;overflow:hidden;background-color:#000;background-image:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.35),rgba(0,0,0,.55)),url('images/posters/theatre-seats.jpg'),url('images/posters/action-reel.jpg'),url('images/movies-bg.jpg');background-size:cover,42% auto,42% auto,cover;background-position:center,left center,right center,center;background-repeat:no-repeat}
+.movies-section:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.28) 50%,rgba(0,0,0,.6));pointer-events:none}
+.movies-section>*{position:relative;z-index:1}
+.movies-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;max-width:none;text-align:left;margin:0 auto 18px;padding-right:72px}
+.movies-head h2,.movies-head h3{margin:0 0 8px}
+.movies-head p{margin:0}
+.movies-head-sub{margin-top:28px}
+.movies-head-sub h3{font-family:var(--display);font-size:clamp(22px,3vw,30px);letter-spacing:-.02em}
+.rail-nav{display:flex;gap:8px;flex:none}
+.rail-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:24px;line-height:1;cursor:pointer}
+.rail-btn:hover{border-color:var(--amber);background:rgba(236,72,153,.12)}
+.movie-rail{overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding:8px 20px 22px;scroll-behavior:smooth}
+.movie-rail::-webkit-scrollbar{display:none}
+.movie-track{display:flex;gap:14px;width:max-content}
+.movie-card{position:relative;width:190px;flex:none;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card2);transition:transform .2s,box-shadow .2s}
+.movie-card img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;display:block}
+.movie-card span{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-weight:800;font-size:14px}
+.movie-card:hover{transform:translateY(-6px) scale(1.04);box-shadow:0 18px 40px rgba(180,20,90,.35);z-index:2}
+@media(max-width:680px){
+  .movies-head{flex-direction:column;align-items:flex-start}
+  .movie-card{width:132px}
+}
 .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .trust-item{padding:24px 22px;border-right:1px solid var(--line)}

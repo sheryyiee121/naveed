@@ -39,6 +39,18 @@
     window.addEventListener('resize', function () { if (window.innerWidth > 900) close(); });
   })();
 
+  /* Movie carousels */
+  document.querySelectorAll('.movie-track').forEach(function (track) {
+    track.innerHTML += track.innerHTML;
+  });
+  document.querySelectorAll('.rail-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var rail = document.getElementById('rail-' + btn.getAttribute('data-rail'));
+      if (!rail) return;
+      rail.scrollBy({ left: Number(btn.getAttribute('data-dir')) * Math.max(280, rail.clientWidth * 0.72), behavior: 'smooth' });
+    });
+  });
+
   /* FAQ accordion */
   function bindFaq() {
     document.querySelectorAll('.faq-q').forEach(function (button) {

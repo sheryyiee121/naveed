@@ -29,7 +29,7 @@
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=movies">
 </head>
 <body>
 <header class="site"><div class="wrap nav">
@@ -38,8 +38,76 @@
 <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
 <main>
 
-      <section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="kicker">Made for British telly lovers</div><h1>IPTV UK subscription, <span class="hl">without the faff.</span></h1><p>Live channels, films, sport and family favourites in one friendly place — ready for your Firestick or Smart TV.</p><div class="hero-cta"><a class="btn btn-primary" href="https://wa.me/447346378897?text=Hello%20Blaster%20TV%20UK%2C%20I%27d%20like%20to%20start%20a%2024-hour%20trial." target="_blank" rel="noopener">Try it free for 24 hours</a><a class="btn btn-ghost" href="packages.html">See simple plans</a></div><div class="hero-proof">No contract · Friendly setup help · Watch in minutes</div><div class="stats"><div class="stat"><b>28,000+</b><span>live channels</span></div><div class="stat"><b>80,000+</b><span>movies &amp; series</span></div><div class="stat"><b>4K</b><span>where available</span></div><div class="stat"><b>24 hours</b><span>free trial</span></div></div></div></div></div></section>
+      <section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="kicker">Made for British telly lovers</div><h1>IPTV UK subscription, <span class="hl">without the faff.</span></h1><p>Live channels, films, sport and family favourites in one friendly place — ready for your Firestick or Smart TV.</p><div class="hero-cta"><a class="btn btn-primary" href="https://wa.me/447346378897?text=Hello%20Blaster%20TV%20UK%2C%20I%27d%20like%20to%20start%20a%2024-hour%20trial." target="_blank" rel="noopener">Try it free for 24 hours</a><a class="btn btn-ghost" href="packages.html">See simple plans</a></div><div class="hero-proof">No contract · Friendly setup help · Watch in minutes</div><div class="stats"><div class="stat"><b>28,000+</b><span>live channels</span></div><div class="stat"><b>80,000+</b><span>movies &amp; series</span></div><div class="stat"><b>4K</b><span>where available</span></div><div class="stat"><b>24 hours</b><span>free trial</span></div></div></div></div>
+      <div class="hero-movies movie-rail" id="rail-hero" data-lenis-prevent>
+        <div class="movie-track">
+          <article class="movie-card"><img src="images/posters/action-reel.jpg" alt="Cinema Night" width="400" height="600"><span>Cinema Night</span></article>
+          <article class="movie-card"><img src="images/posters/comedy.jpg" alt="Friday Roast" width="400" height="600"><span>Friday Roast</span></article>
+          <article class="movie-card"><img src="images/posters/cinema-night.jpg" alt="The Drop" width="400" height="600"><span>The Drop</span></article>
+          <article class="movie-card"><img src="images/posters/romance.jpg" alt="Late Train" width="400" height="600"><span>Late Train</span></article>
+          <article class="movie-card"><img src="images/posters/space.jpg" alt="Cold Orbit" width="400" height="600"><span>Cold Orbit</span></article>
+          <article class="movie-card"><img src="images/posters/popcorn-night.jpg" alt="Popcorn Night" width="400" height="600"><span>Popcorn Night</span></article>
+          <article class="movie-card"><img src="images/posters/film-set.jpg" alt="On Set" width="400" height="600"><span>On Set</span></article>
+          <article class="movie-card"><img src="images/posters/football.jpg" alt="Away Day" width="400" height="600"><span>Away Day</span></article>
+          <article class="movie-card"><img src="images/posters/concert.jpg" alt="After Hours" width="400" height="600"><span>After Hours</span></article>
+          <article class="movie-card"><img src="images/posters/theatre-seats.jpg" alt="Front Row" width="400" height="600"><span>Front Row</span></article>
+        </div>
+      </div>
+      </section>
       <section class="trust" aria-label="Service assurances"><div class="wrap trust-grid"><div class="trust-item"><strong>24-hour free trial</strong><span>Have a proper look first</span></div><div class="trust-item"><strong>Firestick ready</strong><span>Simple, guided setup</span></div><div class="trust-item"><strong>4K sports</strong><span>Big moments, crisp picture</span></div><div class="trust-item"><strong>No long contract</strong><span>Choose what suits you</span></div></div></section>
+      <section class="section movies-section" aria-label="Films and series carousel">
+        <div class="wrap">
+          <div class="section-head movies-head">
+            <div>
+              <div class="kicker">On demand</div>
+              <h2>Films, series and live sport.</h2>
+              <p>A movie-style library you can flick through — the same way you browse telly at home.</p>
+            </div>
+            <div class="rail-nav">
+              <button type="button" class="rail-btn" data-rail="films" data-dir="-1" aria-label="Previous films">‹</button>
+              <button type="button" class="rail-btn" data-rail="films" data-dir="1" aria-label="Next films">›</button>
+            </div>
+          </div>
+        </div>
+        <div class="movie-rail" id="rail-films" data-lenis-prevent>
+          <div class="movie-track">
+            <article class="movie-card"><img src="images/posters/action-reel.jpg" alt="Cinema Night" width="400" height="600" loading="lazy"><span>Cinema Night</span></article>
+            <article class="movie-card"><img src="images/posters/drama-stage.jpg" alt="Quiet House" width="400" height="600" loading="lazy"><span>Quiet House</span></article>
+            <article class="movie-card"><img src="images/posters/comedy.jpg" alt="Friday Roast" width="400" height="600" loading="lazy"><span>Friday Roast</span></article>
+            <article class="movie-card"><img src="images/posters/cinema-night.jpg" alt="The Drop" width="400" height="600" loading="lazy"><span>The Drop</span></article>
+            <article class="movie-card"><img src="images/posters/romance.jpg" alt="Late Train" width="400" height="600" loading="lazy"><span>Late Train</span></article>
+            <article class="movie-card"><img src="images/posters/space.jpg" alt="Cold Orbit" width="400" height="600" loading="lazy"><span>Cold Orbit</span></article>
+            <article class="movie-card"><img src="images/posters/crime.jpg" alt="East End" width="400" height="600" loading="lazy"><span>East End</span></article>
+            <article class="movie-card"><img src="images/posters/city-night.jpg" alt="Fog Lane" width="400" height="600" loading="lazy"><span>Fog Lane</span></article>
+            <article class="movie-card"><img src="images/posters/popcorn-night.jpg" alt="Popcorn Night" width="400" height="600" loading="lazy"><span>Popcorn Night</span></article>
+            <article class="movie-card"><img src="images/posters/film-set.jpg" alt="On Set" width="400" height="600" loading="lazy"><span>On Set</span></article>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="section-head movies-head movies-head-sub">
+            <div>
+              <div class="kicker">Sport &amp; family</div>
+              <h3>More to put on.</h3>
+            </div>
+            <div class="rail-nav">
+              <button type="button" class="rail-btn" data-rail="more" data-dir="-1" aria-label="Previous titles">‹</button>
+              <button type="button" class="rail-btn" data-rail="more" data-dir="1" aria-label="Next titles">›</button>
+            </div>
+          </div>
+        </div>
+        <div class="movie-rail" id="rail-more" data-lenis-prevent>
+          <div class="movie-track">
+            <article class="movie-card"><img src="images/posters/football.jpg" alt="Away Day" width="400" height="600" loading="lazy"><span>Away Day</span></article>
+            <article class="movie-card"><img src="images/posters/formula.jpg" alt="Red Line" width="400" height="600" loading="lazy"><span>Red Line</span></article>
+            <article class="movie-card"><img src="images/posters/boxing.jpg" alt="Last Bell" width="400" height="600" loading="lazy"><span>Last Bell</span></article>
+            <article class="movie-card"><img src="images/posters/newsroom.jpg" alt="Box Set Night" width="400" height="600" loading="lazy"><span>Box Set Night</span></article>
+            <article class="movie-card"><img src="images/posters/concert.jpg" alt="After Hours" width="400" height="600" loading="lazy"><span>After Hours</span></article>
+            <article class="movie-card"><img src="images/posters/nature.jpg" alt="Wild Park" width="400" height="600" loading="lazy"><span>Wild Park</span></article>
+            <article class="movie-card"><img src="images/posters/theatre-seats.jpg" alt="Front Row" width="400" height="600" loading="lazy"><span>Front Row</span></article>
+            <article class="movie-card"><img src="images/posters/drama-stage.jpg" alt="Dark House" width="400" height="600" loading="lazy"><span>Dark House</span></article>
+          </div>
+        </div>
+      </section>
       <section class="section"><div class="wrap"><div class="section-head"><div class="kicker">Make it yours</div><h2>Check your speed. Meet your setup.</h2><p>Two quick tools to take the guesswork out of getting started.</p></div><div class="grid2"><div class="speed-card"><div class="tool-title"><div class="icon-dot">↓</div><h3>Is your broadband ready?</h3></div><p>Enter the download speed from your broadband test and we’ll show the best viewing quality to aim for.</p><div class="speed-entry"><input id="speedInput" type="number" min="1" max="1000" placeholder="e.g. 45"><button id="speedButton" type="button">Check Mbps</button></div><div class="tool-result" id="speedResult" aria-live="polite">As a guide: 10 Mbps suits HD, while 25 Mbps or more is better for 4K.</div></div><div class="quiz-card"><div class="tool-title"><div class="icon-dot">?</div><h3>Your 3-step setup match</h3></div><div class="quiz-progress"><span class="active"></span><span></span><span></span></div><p class="quiz-question" id="quizQuestion">What will you watch on most?</p><div class="quiz-options" id="quizOptions"></div></div></div></div></section>
       <section class="final"><div class="wrap final-card"><div class="final-copy"><h2>Fancy a no-pressure look?</h2><p>Try Blaster TV UK for 24 hours on the device and broadband you already use.</p></div><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/447346378897?text=Hello%20Blaster%20TV%20UK%2C%20I%27d%20like%20to%20start%20a%2024-hour%20trial.">Start free trial</a></div></section>
 
